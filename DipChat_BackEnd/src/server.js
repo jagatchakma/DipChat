@@ -1,9 +1,8 @@
 // const express = require("express");
 import express from "express";
-import dotenv from "dotenv";
-dotenv.config();
 const app = express();
-const port = process.env.PORT || 3000;
+import {ENV} from "../lib/env.js"
+const port = ENV.PORT || 3000;
 
 import authRoutes from "./routes/auth.router.js"
 import messageRoutes from "./routes/messages.router.js"
