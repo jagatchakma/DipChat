@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import {ENV} from "../lib/env.js"
 
 export const connectDB = async () => {
@@ -13,3 +14,4 @@ export const connectDB = async () => {
     process.exit(1);
   }
 };
+

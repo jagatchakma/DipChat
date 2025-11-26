@@ -1,7 +1,7 @@
 // const express = require("express");
 import express from "express";
 const app = express();
-import {ENV} from "../lib/env.js"
+import {ENV} from "./lib/env.js"
 const port = ENV.PORT || 3000;
 
 import authRoutes from "./routes/auth.router.js"
