@@ -11,7 +11,7 @@ import cookieParser from "cookie-parser";
 
 // middleware
 app.use(express.json()); // req.body
-app.use(cookieParser);
+app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
@@ -20,8 +20,9 @@ app.get("/", (req, res) => {
   res.send("server working is ok");
 });
 
-connectDB();
 app.listen(port, () => {
   console.log(`server working wall, the port is: ${port}`);
   // connectDB();
 });
+// initiate DB connection
+connectDB();
