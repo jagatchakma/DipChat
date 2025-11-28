@@ -69,7 +69,7 @@ export const signup = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 
-  res.send("signup success");
+  // res.send("signup success");
 };
 
 export const login = async (req, res) => {
