@@ -7,9 +7,11 @@ const port = ENV.PORT || 3000;
 import authRoutes from "./routes/auth.router.js"
 import messageRoutes from "./routes/messages.router.js"
 import { connectDB } from "./lib/db.js";
+import cookieParser from "cookie-parser";
 
 // middleware
 app.use(express.json()); // req.body
+app.use(cookieParser);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
