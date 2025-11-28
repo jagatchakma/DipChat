@@ -20,7 +20,8 @@ app.get("/", (req, res) => {
   res.send("server working is ok");
 });
 
+connectDB();
 app.listen(port, () => {
   console.log(`server working wall, the port is: ${port}`);
-  connectDB();
+  // connectDB();
 });
